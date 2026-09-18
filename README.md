@@ -1,16 +1,61 @@
-# React + Vite
+Laboratory Exercise 4.2 - React Hooks — Props and State in Action
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A Class Attendance Tracker web app built for Laboratory Exercise 4.2. It allows teachers to mark student attendance, search/filter the roster, and add new students in real time using React state and props.
 
-Currently, two official plugins are available:
+📌 Features & Task Requirements
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Task 1: Project Scaffolding
 
-## React Compiler
+Organized code inside src/components/ with four modular files: App.jsx, StudentCard.jsx, StudentList.jsx, and AddStudentForm.jsx.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Task 2: Passing Data via Props
 
-## Expanding the Oxlint configuration
+Passed student information down from App to StudentCard using StudentList as a middle layer.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+Styled student status dynamically (green for Present, red for Absent).
+
+Task 3: Interactive State & Toggling Status
+
+Used useState in App.jsx to store student data.
+
+Added a toggleStatus function using functional state updaters (setStudents(prev => ...)) to safely switch attendance states.
+
+Task 4: Search Filter & Add Student Form
+
+Search: Filtered the student list live using a searchTerm state without modifying the original data.
+
+Add Form: Created a controlled form in AddStudentForm to add new students immediately without refreshing the page.
+
+Bonus Task: LocalStorage Persistence
+
+Applied useEffect to save attendance updates in localStorage so data stays saved across page reloads.
+
+📂 Component Structure
+
+App (Parent State: students, search term)
+ ├── Search Bar
+ ├── AddStudentForm (Form input state)
+ └── StudentList (Passes down student data)
+      └── StudentCard (Displays student info & toggle button)
+
+
+🚀 How to Run Locally
+
+Clone the repository:
+
+git clone <your-repository-url>
+cd my-app
+
+
+Install dependencies:
+
+npm install
+
+
+Start the development server:
+
+npm run dev
+
+
+Open in browser:
+Navigate to given link
