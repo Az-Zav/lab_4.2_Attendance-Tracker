@@ -63,4 +63,4 @@ App (Parent State: students, search term)
    ```
 
 4. **Open in browser:**
-   Navigate to `http://localhost:5173`
+   Navigate to given link in terminal
